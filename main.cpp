@@ -31,10 +31,7 @@ int main(int argc, char const *argv[])
 				myfile>>years;
 				myfile>>username;
 				friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
-<<<<<<< HEAD
 
-=======
->>>>>>> 03a04ec4f896e54d01c51ca958904e17fe4dee5f
 	    	}else if (letra=="Familiar")
 	    	{
 	    		myfile>>name;
@@ -42,12 +39,7 @@ int main(int argc, char const *argv[])
 				myfile>>consanguinidad;
 				myfile>>parentesco;
 				friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco));
-<<<<<<< HEAD
-			}else if (letra=="Compañero")
-=======
-			}else if (letra=="Compañer")
->>>>>>> 03a04ec4f896e54d01c51ca958904e17fe4dee5f
-			{
+			}else if (letra=="Compañero") {
 			    myfile>>name;
 				myfile>>telefono;
 				myfile>>clase;
