@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
 	string letra;
 	vector<Contactos*> friendList;
 	ifstream myfile (argv[1]);
-	myfile.open("test.txt");
+	myfile.open("./test.txt");
 	string name, username, consanguinidad, parentesco, clase, trabajarJuntos, puntuacion, tipoCastigo, tipoContacto;
 	int telefono, years,cont;
 	while ( letra!="Exit")
@@ -160,7 +160,7 @@ int main(int argc, char const *argv[])
 
 	}
 	ofstream ficheroSalida;
-	ficheroSalida.open ("test.txt");
+	ficheroSalida.open ("./test.txt");
 	for (int i = 0; i <friendList.size(); ++i)
 	{
 		ficheroSalida << friendList.at(i)->toString()<<endl;
