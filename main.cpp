@@ -49,7 +49,8 @@ int main(int argc, char const *argv[])
 					cout<<"Ingrese el username: ";
 					cin>>username;
 					cout<<endl;
-					friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
+					Amigos* a =(new Amigos("Amigo", name, telefono, years, username));
+					friendList.push_back(dynamic_cast<Contactos*>(a));
 					cout<<"Se creo un nuevo amigo \n";
 					
 				}

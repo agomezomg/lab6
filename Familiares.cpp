@@ -1,8 +1,9 @@
+#include "Contactos.h"
 #include "Familiares.h"
 #include <string>
 using std::string;
 
-Familiares::Familiares() {
+Familiares::Familiares() : Contactos(){
 
 }
 

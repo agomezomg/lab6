@@ -1,5 +1,6 @@
 #pragma once
 #include "Contactos.h"
+#include "Castigo.h"
 #include <string>
 using std::string;
 
