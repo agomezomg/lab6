@@ -6,7 +6,8 @@ Amigos::Amigos() {
 
 }
 
-Amigos::Amigos(int numYears, string username) : numYears(numYears), username(username) {
+Amigos::Amigos(string tipo, string nombre, int telefono):Contactos(tipo, nombre, telefono),
+	numYears(numYears), username(username) {
 
 }
 

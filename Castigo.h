@@ -10,6 +10,7 @@ private:
 
 public:
 	Castigo();
+	Castigo(string, string, int, string, string);
 	virtual ~Castigo();
 	string getaQuien();
 	string getMetodo();

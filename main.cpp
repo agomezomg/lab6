@@ -49,7 +49,7 @@ int main(int argc, char const *argv[])
 					cout<<"Ingrese el username: ";
 					cin>>username;
 					cout<<endl;
-					friendList.push_back(new Amigos("Amigo", name, telefono, years, username);
+					friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
 					cout<<"Se creo un nuevo amigo \n";
 					
 				}
@@ -67,7 +67,7 @@ int main(int argc, char const *argv[])
 					cout<<"Ingrese el grado de parentesco: ";
 					cin>>parentesco;
 					cout<<endl;
-					friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco);
+					friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco));
 					cout<<"Se creo un nuevo familiar \n";
 
 				}
@@ -85,7 +85,7 @@ int main(int argc, char const *argv[])
 					cout<<"¿Trabajaría en grupo con esta persona? [s/n]: ";
 					cin>>trabajarJuntos;
 					cout<<endl;
-					friendList.push_back(new Companeros("Compañero", name, telefono, clase, trabajarJuntos);
+					friendList.push_back(new Companeros("Compañero", name, telefono, clase, trabajarJuntos));
 					cout<<"Se creo un nuevo compañero \n";
 					
 				}
@@ -103,8 +103,8 @@ int main(int argc, char const *argv[])
 					cout<<"Ingrese el tipo de castigo: ";
 					cin>>tipoCastigo;
 					cout<<endl;
-					friendList.push_back(new Castigo("Castigo", name, telefono, consanguinidad, parentesco);
-					cout<<"Se creo un nuevo castigo \n";
+					friendList.push_back(new Castigo("Castigo", name, telefono, puntuacion, tipoCastigo));
+					cout<<"Se creo un nuevo castigo (arr) :) \n";
 					
 				}
 			}

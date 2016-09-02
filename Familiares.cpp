@@ -6,7 +6,8 @@ Familiares::Familiares() {
 
 }
 
-Familiares::Familiares(string familiaridad, string parentesco) : familiaridad(familiaridad), parentesco(parentesco) {
+Familiares::Familiares(string tipo, string nombre, int telefono):Contactos(tipo, nombre, telefono),
+	familiaridad(familiaridad), parentesco(parentesco) {
 
 }
 

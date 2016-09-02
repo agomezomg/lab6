@@ -6,7 +6,8 @@ Castigo::Castigo() {
 
 }
 
-Castigo::Castigo(string aQuien, string metodo) : aQuien(aQuien), metodo(metodo) {
+Castigo::Castigo(string tipo, string nombre, int telefono):Contactos(tipo, nombre, telefono),
+	aQuien(aQuien), metodo(metodo){
 
 }
 

@@ -6,7 +6,8 @@ Companeros::Companeros() {
 
 }
 
-Companeros::Companeros(string clase, string trabajarJuntos) : clase(clase), trabajarJuntos(trabajarJuntos) {
+Companeros::Companeros(string tipo, string nombre, int telefono):Contactos(tipo, nombre, telefono),
+	clase(clase), trabajarJuntos(trabajarJuntos) {
 
 }
 

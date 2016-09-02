@@ -10,7 +10,7 @@ private:
 	string trabajarJuntos;
 public:
 	Companeros();
-	Companeros(string, string);
+	Companeros(string, string, int, string, string);
 	virtual ~Companeros();
 	string getClase();
 	string getTrabajarJuntos();

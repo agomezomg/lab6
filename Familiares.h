@@ -10,7 +10,7 @@ private:
 
 public:
 	Familiares();
-	Familiares(string, string);
+	Familiares(string, string, int, string, string);
 	virtual ~Familiares();
 	string getFamiliaridad();
 	string getParentesco();

@@ -11,7 +11,7 @@ private:
 
 public:
 	Amigos();
-	Amigos(int, string);
+	Amigos(string, string, int, int, string);
 	virtual ~Amigos();
 	int getNumYears();
 	string getUsername();
