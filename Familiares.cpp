@@ -1,13 +1,14 @@
 #include "Contactos.h"
 #include "Familiares.h"
+#include <sstream>
 #include <string>
-using std::string;
+using namespace std;
 
-Familiares::Familiares() : Contactos(){
+/*Familiares::Familiares() : Contactos() {
 
-}
+}*/
 
-Familiares::Familiares(string tipo, string nombre, int telefono):Contactos(tipo, nombre, telefono),
+Familiares::Familiares(string tipo, string nombre, int telefono, string familiaridad, string parentesco):Contactos(tipo, nombre, telefono),
 	familiaridad(familiaridad), parentesco(parentesco) {
 
 }
@@ -16,16 +17,8 @@ Familiares::~Familiares() {
 
 }
 
-string Familiares::getFamiliaridad() {
-	return this -> familiaridad;
-}
-
-string Familiares::getParentesco() {
-	return this -> parentesco;
-}
-
 string Familiares::toString()const {
 	stringstream ss;
-	ss << Contactos::toString() << " " << familiaridad << " " << username;
+	ss << Contactos::toString() << " " << familiaridad << " " << parentesco;
 	return ss.str();
 }

@@ -1,9 +1,10 @@
 #pragma once
 #include "Contactos.h"
+#include <sstream>
 #include <string>
-using std::string;
+using namespace std;
 
-class Companeros : Contactos
+class Companeros : public Contactos
 {
 private:
 	string clase;
@@ -12,7 +13,5 @@ public:
 	Companeros();
 	Companeros(string, string, int, string, string);
 	virtual ~Companeros();
-	string getClase();
-	string getTrabajarJuntos();
 	virtual string toString()const;
 };

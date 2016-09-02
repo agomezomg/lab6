@@ -1,9 +1,10 @@
 #pragma once
 #include "Contactos.h"
+#include <sstream>
 #include <string>
-using std::string;
+using namespace std;
 
-class Amigos : Contactos
+class Amigos : public Contactos
 {
 private:
 	int numYears;
@@ -13,7 +14,5 @@ public:
 	Amigos();
 	Amigos(string, string, int, int, string);
 	virtual ~Amigos();
-	int getNumYears();
-	string getUsername();
 	virtual string toString()const;
 };

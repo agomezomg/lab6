@@ -49,8 +49,8 @@ int main(int argc, char const *argv[])
 					cout<<"Ingrese el username: ";
 					cin>>username;
 					cout<<endl;
-					Amigos* a =(new Amigos("Amigo", name, telefono, years, username));
-					friendList.push_back(dynamic_cast<Contactos*>(a));
+					Amigos* newFriend = new Amigos("Amigo", name, telefono, years, username);
+					friendList.push_back(newFriend);
 					cout<<"Se creo un nuevo amigo \n";
 					
 				}
@@ -108,6 +108,11 @@ int main(int argc, char const *argv[])
 					cout<<"Se creo un nuevo castigo (arr) :) \n";
 					
 				}
+			}
+		} else if (opcion1 == 2) {
+			for (int i = 0; i < friendList.size(); ++i)
+			{
+				cout << friendList.at(i) -> toString() << endl;
 			}
 		}
 

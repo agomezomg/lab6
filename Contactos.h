@@ -1,18 +1,17 @@
 #pragma once
+#include <sstream>
 #include <string>
 using namespace std;
 
 class Contactos
 {
-private:
+protected:
 	string tipo;
 	string nombre;
 	int telefono;
 public:
 	Contactos();
-	Contactos(string, int);
+	Contactos(string, string, int);
 	virtual ~Contactos();
-	string getNombre();
-	int getTelefono();
 	virtual string toString()const;
 };

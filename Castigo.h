@@ -1,10 +1,10 @@
 #pragma once
 #include "Contactos.h"
-#include "Castigo.h"
+#include <sstream>
 #include <string>
-using std::string;
+using namespace std;
 
-class Castigo : Contactos
+class Castigo : public Contactos
 {
 private:
 	string aQuien, metodo;
@@ -13,7 +13,5 @@ public:
 	Castigo();
 	Castigo(string, string, int, string, string);
 	virtual ~Castigo();
-	string getaQuien();
-	string getMetodo();
 	virtual string toString()const;
 };

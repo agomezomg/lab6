@@ -1,9 +1,10 @@
 #pragma once
 #include "Contactos.h"
+#include <sstream>
 #include <string>
-using std::string;
+using namespace std;
 
-class Familiares : Contactos
+class Familiares : public Contactos
 {
 private:
 	string familiaridad, parentesco;
@@ -12,7 +13,5 @@ public:
 	Familiares();
 	Familiares(string, string, int, string, string);
 	virtual ~Familiares();
-	string getFamiliaridad();
-	string getParentesco();
 	virtual string toString()const;
 };

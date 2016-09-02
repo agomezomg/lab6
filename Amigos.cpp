@@ -1,26 +1,20 @@
+#include "Contactos.h"
 #include "Amigos.h"
+#include <sstream>
 #include <string>
-using std::string;
+using namespace std;
 
-Amigos::Amigos() {
+Amigos::Amigos() : Contactos() {
 
 }
 
-Amigos::Amigos(string tipo, string nombre, int telefono):Contactos(tipo, nombre, telefono),
+Amigos::Amigos(string tipo, string nombre, int telefono, int numYears, string username):Contactos(tipo, nombre, telefono),
 	numYears(numYears), username(username) {
 
 }
 
 Amigos::~Amigos() {
 
-}
-
-int Amigos::getNumYears() {
-	return this -> numYears;
-}
-
-string Amigos::getUsername() {
-	return this -> username;
 }
 
 string Amigos::toString()const {

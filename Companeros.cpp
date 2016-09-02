@@ -1,26 +1,20 @@
+#include "Contactos.h"
 #include "Companeros.h"
+#include <sstream>
 #include <string>
-using std::string;
+using namespace std;
 
-Companeros::Companeros() {
+Companeros::Companeros() : Contactos() {
 
 }
 
-Companeros::Companeros(string tipo, string nombre, int telefono):Contactos(tipo, nombre, telefono),
+Companeros::Companeros(string tipo, string nombre, int telefono, string clase, string trabajarJuntos):Contactos(tipo, nombre, telefono),
 	clase(clase), trabajarJuntos(trabajarJuntos) {
 
 }
 
 Companeros::~Companeros() {
 
-}
-
-string Companeros::getClase() {
-	return this -> clase;
-}
-
-string Companeros::getTrabajarJuntos() {
-	return this -> trabajarJuntos;
 }
 
 string Companeros::toString()const {
