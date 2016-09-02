@@ -21,24 +21,24 @@ int main(int argc, char const *argv[])
 	myfile.open("./test.txt");
 	string name, username, consanguinidad, parentesco, clase, trabajarJuntos, puntuacion, tipoCastigo, tipoContacto;
 	int telefono, years,cont;
-	while ( letra!="Exit")
+	while (letra!="Exit")
 	    {
 	    	myfile >> letra;
-	    	if (letra=="Amigos")
+	    	if (letra=="Amigo")
 	    	{
 	    		myfile>>name;
 				myfile>>telefono;
 				myfile>>years;
 				myfile>>username;
 				friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
-	    	}else if (letra=="Familiares")
+	    	}else if (letra=="Familiar")
 	    	{
 	    		myfile>>name;
 				myfile>>telefono;
 				myfile>>consanguinidad;
 				myfile>>parentesco;
 				friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco));
-			}else if (letra=="Compañeros")
+			}else if (letra=="Compañer")
 			{
 			    myfile>>name;
 				myfile>>telefono;
@@ -91,8 +91,7 @@ int main(int argc, char const *argv[])
 					cout<<"Ingrese el username: ";
 					cin>>username;
 					cout<<endl;
-					Amigos* newFriend = new Amigos("Amigo", name, telefono, years, username);
-					friendList.push_back(newFriend);
+					friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
 					cout<<"Se creo un nuevo amigo \n";
 					
 				}
@@ -112,7 +111,6 @@ int main(int argc, char const *argv[])
 					cout<<endl;
 					friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco));
 					cout<<"Se creo un nuevo familiar \n";
-
 				}
 				else if(opcion2 == 3){
 					cout<<"------------------Agregar Compañero--------------"<<endl;

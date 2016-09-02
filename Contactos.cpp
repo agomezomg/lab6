@@ -17,6 +17,6 @@ Contactos::~Contactos() {
 
 string Contactos::toString()const{
 	stringstream ss;
-	ss << tipo << " " << nombre << " " << telefono;
+	ss << nombre << " " << telefono;
 	return ss.str();
 }
