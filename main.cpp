@@ -24,21 +24,22 @@ int main(int argc, char const *argv[])
 	while ( letra!="Exit")
 	    {
 	    	myfile >> letra;
-	    	if (letra=="Amigos")
+	    	if (letra=="Amigo")
 	    	{
 	    		myfile>>name;
 				myfile>>telefono;
 				myfile>>years;
 				myfile>>username;
 				friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
-	    	}else if (letra=="Familiares")
+
+	    	}else if (letra=="Familiar")
 	    	{
 	    		myfile>>name;
 				myfile>>telefono;
 				myfile>>consanguinidad;
 				myfile>>parentesco;
 				friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco));
-			}else if (letra=="Compañeros")
+			}else if (letra=="Compañero")
 			{
 			    myfile>>name;
 				myfile>>telefono;
@@ -154,7 +155,7 @@ int main(int argc, char const *argv[])
 		} else if (opcion1 == 2) {
 			for (int i = 0; i < friendList.size(); ++i)
 			{
-				cout << friendList.at(i) -> toString() << endl;
+				cout << dynamic_cast<Contactos*>(friendList.at(i)) -> toString() << endl;
 			}
 		}
 

@@ -1,1 +1,6 @@
+Familiar 1 1 1 1
+Familiar 1 1 1 1
+Compañero 2 2 2 2
+Castigo 4 4 1 1
+Castigo Juana 2345 1 1
 Exit
