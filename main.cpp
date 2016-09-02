@@ -7,14 +7,56 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <fstream>
+#include <string>
 using namespace std;
-
 int main(int argc, char const *argv[])
-{
+{	
+	//cout<<"Holls";
 	int opcion1 = 0;
 	int opcion2;
+	string letra;
 	vector<Contactos*> friendList;
-
+	ifstream myfile (argv[1]);
+	myfile.open("test.txt");
+	string name, username, consanguinidad, parentesco, clase, trabajarJuntos, puntuacion, tipoCastigo, tipoContacto;
+	int telefono, years,cont;
+	while ( letra!="Exit")
+	    {
+	    	myfile >> letra;
+	    	if (letra=="Amigos")
+	    	{
+	    		myfile>>name;
+				myfile>>telefono;
+				myfile>>years;
+				myfile>>username;
+				friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
+	    	}else if (letra=="Familiares")
+	    	{
+	    		myfile>>name;
+				myfile>>telefono;
+				myfile>>consanguinidad;
+				myfile>>parentesco;
+				friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco));
+			}else if (letra=="Compañeros")
+			{
+			    myfile>>name;
+				myfile>>telefono;
+				myfile>>clase;
+				myfile>>trabajarJuntos;
+				friendList.push_back(new Companeros("Compañero", name, telefono, clase, trabajarJuntos));
+					
+			}else if (letra=="Castigo")
+			{
+				myfile>>name;
+				myfile>>telefono;
+				myfile>>puntuacion;
+				myfile>>tipoCastigo;
+				friendList.push_back(new Castigo("Castigo", name, telefono, consanguinidad, parentesco));
+				
+			}
+	    	
+	    }
 	while(opcion1!=3){
 		cout<<"-------------Menú-----------------"<<endl;
 		cout<<"1. Agregar contacto"<<endl;
@@ -117,5 +159,13 @@ int main(int argc, char const *argv[])
 		}
 
 	}
-	return 0;
+	ofstream ficheroSalida;
+	ficheroSalida.open ("test.txt");
+	for (int i = 0; i <friendList.size(); ++i)
+	{
+		ficheroSalida << friendList.at(i)->toString()<<endl;
+	}
+	ficheroSalida << "Exit";
+	ficheroSalida.close();
+    return 0;
 }
