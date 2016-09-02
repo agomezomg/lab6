@@ -13,6 +13,6 @@ public:
 	Familiares(string, string);
 	virtual ~Familiares();
 	string getFamiliaridad();
-	strin getParentesco();
+	string getParentesco();
 	virtual string toString()const;
 };
