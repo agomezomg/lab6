@@ -18,10 +18,10 @@ int main(int argc, char const *argv[])
 	string letra;
 	vector<Contactos*> friendList;
 	ifstream myfile (argv[1]);
-	myfile.open("test.txt");
+	myfile.open("./test.txt");
 	string name, username, consanguinidad, parentesco, clase, trabajarJuntos, puntuacion, tipoCastigo, tipoContacto;
 	int telefono, years,cont;
-	while ( letra!="Exit")
+	while (letra!="Exit")
 	    {
 	    	myfile >> letra;
 	    	if (letra=="Amigo")
@@ -31,7 +31,10 @@ int main(int argc, char const *argv[])
 				myfile>>years;
 				myfile>>username;
 				friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 03a04ec4f896e54d01c51ca958904e17fe4dee5f
 	    	}else if (letra=="Familiar")
 	    	{
 	    		myfile>>name;
@@ -39,7 +42,11 @@ int main(int argc, char const *argv[])
 				myfile>>consanguinidad;
 				myfile>>parentesco;
 				friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco));
+<<<<<<< HEAD
 			}else if (letra=="Compañero")
+=======
+			}else if (letra=="Compañer")
+>>>>>>> 03a04ec4f896e54d01c51ca958904e17fe4dee5f
 			{
 			    myfile>>name;
 				myfile>>telefono;
@@ -92,8 +99,7 @@ int main(int argc, char const *argv[])
 					cout<<"Ingrese el username: ";
 					cin>>username;
 					cout<<endl;
-					Amigos* newFriend = new Amigos("Amigo", name, telefono, years, username);
-					friendList.push_back(newFriend);
+					friendList.push_back(new Amigos("Amigo", name, telefono, years, username));
 					cout<<"Se creo un nuevo amigo \n";
 					
 				}
@@ -113,7 +119,6 @@ int main(int argc, char const *argv[])
 					cout<<endl;
 					friendList.push_back(new Familiares("Familiar", name, telefono, consanguinidad, parentesco));
 					cout<<"Se creo un nuevo familiar \n";
-
 				}
 				else if(opcion2 == 3){
 					cout<<"------------------Agregar Compañero--------------"<<endl;
@@ -161,7 +166,7 @@ int main(int argc, char const *argv[])
 
 	}
 	ofstream ficheroSalida;
-	ficheroSalida.open ("test.txt");
+	ficheroSalida.open ("./test.txt");
 	for (int i = 0; i <friendList.size(); ++i)
 	{
 		ficheroSalida << friendList.at(i)->toString()<<endl;

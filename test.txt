@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 Familiar 1 1 1 1
 Familiar 1 1 1 1
 Compañero 2 2 2 2
 Castigo 4 4 1 1
 Castigo Juana 2345 1 1
+=======
+Amigo ANa 1 1 1
+Familiar Michelle 3212 1 1
+Amigo ANa 2 2 2
+Familiar Michelle 2 2 2
+Compañero Dudi 1 1 n
+Castigo Gabi 1 Gabi Aceituno
+>>>>>>> 03a04ec4f896e54d01c51ca958904e17fe4dee5f
 Exit
